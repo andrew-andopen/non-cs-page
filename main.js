@@ -96,3 +96,88 @@ closeTag.forEach(tag => {
 })
                    
 
+//Product page
+const productInfo = [
+  {
+    name: "Belo Keyring",
+    image: "assets/product_images/keyring.png"
+  },
+  {
+    name: "Baby Bibs",
+    image: "assets/product_images/baby_bibs.png"
+  },
+  {
+    name: "Beeswax Candle",
+    image: "assets/product_images/candle.png"
+  },
+  {
+    name: "Yoga Matt",
+    image: "assets/product_images/yoga_mat.png"
+  },
+  {
+    name: "Colouring Book",
+    image: "assets/product_images/colouring_book.jpg"
+  },
+  {
+    name: "Pin Pack",
+    image: "assets/product_images/pin_pack.jpg"
+  },
+  {
+    name: "Toppling Tower",
+    image: "assets/product_images/tower.jpg"
+  },
+  {
+    name: "Water Bottle",
+    image: "assets/product_images/water_bottle.jpg"
+  },
+  {
+    name: "Lambswool Blanked",
+    image: "assets/product_images/throw.png"
+  },
+  {
+    name: "Tote Bag",
+    image: "assets/product_images/bag.png"
+  },
+  {
+    name: "Aesop",
+    image: "assets/product_images/aesop.png"
+  },
+  {
+    name: "Aesop",
+    image: "assets/product_images/aesop.png"
+  },
+  {
+    name: "Aesop",
+    image: "assets/product_images/aesop.png"
+  },
+  {
+    name: "Open Homes",
+    image: "assets/product_images/open_homes.png"
+  },
+  {
+    name: "Sakura",
+    image: "assets/product_images/sakura.png"
+  },
+  {
+    name: "St Patricks Day",
+    image: "assets/product_images/st_patricks_day.png"
+  },
+  {
+    name: "Winter Olympics",
+    image: "assets/product_images/winter_olympics.png"
+  }
+]
+
+
+const productCards = document.querySelectorAll('.product-image img')
+const producttags = document.querySelectorAll('.product-name h4')
+
+
+
+producttags.forEach((card, count) => {
+  card.innerHTML = productInfo[count].name
+})
+
+productCards.forEach((card, count) => {
+  card.src =  productInfo[count].image
+})

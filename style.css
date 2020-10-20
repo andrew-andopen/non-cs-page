@@ -82,6 +82,11 @@ h3{
    font-family: Airbnbcereal W MD;
 }
 
+h4{
+  font-size: 1em;
+  font-family: Airbnbcereal W MD;
+}
+
 .button {
   background-color: #007a87;
   border: 1px solid #007a87;
@@ -140,8 +145,7 @@ section {
   margin-top: 8em;
 }
 
-
-.intro h2 {
+.intro-sub {
   margin: 0 5em 2em 0;
 }
 
@@ -388,8 +392,6 @@ video{
   visibility: hidden;
 }
 
-
-
 .show-answer{
     display: block;
   visibility: visible;
@@ -501,6 +503,53 @@ li{
   position: fixed;
   z-index: 20;
 }
+
+/* product-main */
+
+.product-grid{
+  grid-column: 2/12;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:2em 1em;
+}
+
+.product-card{
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+
+.product-image img{
+  border-radius: 1em 1em 0 0;
+}
+
+.product-name{
+  padding:  0.5em 1em 2em 1em;
+  text-align:center;
+}
+
+#cash-gifting-graphic{
+  grid-column: 2/7;
+}
+
+#cash-gifting-text{
+  grid-column: 8/12;
+  text-align:left;
+  margin-top: 2.5em;
+}
+
+#cash-gifting-text h1{
+  margin-bottom:0.2em;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* unsubscribe */
