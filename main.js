@@ -171,9 +171,6 @@ const productInfo = [
 
 const productCards = document.querySelectorAll('.product-image img')
 const producttags = document.querySelectorAll('.product-name h4')
-
-
-
 producttags.forEach((card, count) => {
   card.innerHTML = productInfo[count].name
 })

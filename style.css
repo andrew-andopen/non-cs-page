@@ -18,11 +18,12 @@ body {
 
 /*utility*/
 .padding {
-  padding: 8em 5em 10em 5em;
+  padding: 8em 5em 8em 5em;
 }
 
 .grid {
   display: grid;
+  /* grid-column-gap: 1em; */
 }
 
 .flex{
@@ -229,7 +230,7 @@ section {
 
 
 .row-grid {
-      grid-column: 3/4;
+    grid-column: 3/4;
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 0.5em;
 }
@@ -274,18 +275,19 @@ section {
   margin-bottom: 1.5em;
 }
 
-.description p {
+.description p,
+#cash-gifting-text p{
   margin-bottom: 2em;
 }
 
 .description .button,
-.button.submit{
+.button.submit,
+#cash-gifting-text .button{
   padding: 0.75em 1em;
 }
 
 .logistics{
   text-align: center;
-  grid-gap: 16px;
 }
 
 .logistics p{
@@ -334,12 +336,11 @@ section {
 
 .wins{
   text-align: center;
-  grid-column-gap: 1em;
 }
 
 
 .wins h1{
-  padding: 0 0 0.2em 0;
+  padding: 0 0 0.5em 0;
 }
 
 .wins .video{
@@ -363,7 +364,6 @@ video{
 
 .faq{
     text-align: center;
-  grid-column-gap: 1em;
 }
 
 .faq h1{
@@ -505,6 +505,17 @@ li{
 }
 
 /* product-main */
+.catalogue.padding {
+  padding: 0em 5em 10em 5em;
+}
+
+.product-intro{
+  padding-bottom:2em;;
+}
+
+.product-sub {
+  margin: 0 9em 2em 0;
+}
 
 .product-grid{
   grid-column: 2/12;
@@ -517,6 +528,9 @@ li{
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
+.campaign-sub{
+  margin-bottom:3em;
+}
 
 .product-image img{
   border-radius: 1em 1em 0 0;
@@ -541,6 +555,10 @@ li{
   margin-bottom:1rem;
 }
 
+
+.column-product{
+  grid-column:2/8;
+}
 
 
 
