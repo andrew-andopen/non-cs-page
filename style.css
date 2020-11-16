@@ -504,7 +504,7 @@ li{
   z-index: 20;
 }
 
-/* product-main */
+/* product-catalogue */
 .catalogue.padding {
   padding: 0em 5em 10em 5em;
 }
@@ -560,6 +560,29 @@ li{
   grid-column:2/8;
 }
 
+/*Individual product*/
+.column-individual-product{
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5em;
+}
+.top,
+.bottom{
+  grid-column: 1/3;
+  grid-gap:0.5em;
+}
+
+.top-left{
+  grid-column: 1/2;
+}
+
+.top-right{
+  grid-column: 2/3;
+}
+
+.top img,
+.bottom img{
+  width:100%;
+}
 
 
 
