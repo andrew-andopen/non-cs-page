@@ -177,4 +177,7 @@ producttags.forEach((card, count) => {
 
 productCards.forEach((card, count) => {
   card.src =  productInfo[count].image
+  card.addEventListener('click', ()=> {
+    window.location.href='/non-cs-page/product.html'
+  })
 })
