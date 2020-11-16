@@ -510,7 +510,7 @@ li{
 }
 
 .product-intro{
-  padding-bottom:2em;;
+  padding-bottom:2em;
 }
 
 .product-sub {
@@ -715,6 +715,11 @@ display: block;
     .padding{
  padding: 6em 5em 8em 5em;
   }
+
+  .product-intro{
+    padding-bottom:0;
+  }
+
   
   header{
       padding: 2.2em 4em;
