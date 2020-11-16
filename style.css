@@ -109,6 +109,7 @@ h4{
   background: rgba(255, 255, 255, 0);
   border: 1px solid #007a87;
   color: #007a87;
+  margin-top:2em;
 }
 
 .secondary:hover{
@@ -275,7 +276,6 @@ section {
   margin-bottom: 1.5em;
 }
 
-.description p,
 #cash-gifting-text p{
   margin-bottom: 2em;
 }
@@ -557,13 +557,14 @@ li{
 
 
 .column-product{
-  grid-column:2/8;
+  grid-column:1/7;
 }
 
 /*Individual product*/
 .column-individual-product{
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0.5em;
+  align-self:flex-start;
 }
 .top,
 .bottom{
@@ -579,9 +580,30 @@ li{
   grid-column: 2/3;
 }
 
-.top img,
-.bottom img{
+.top img{
   width:100%;
+}
+
+.bottom{
+  padding:5em;
+  background-color:#F6F4F5;
+}
+
+.product-info{
+  grid-column: 8/12;
+}
+
+.product-info h4{
+  margin-top:2em;
+  margin-bottom:1em;
+}
+
+.cost{
+  margin-bottom:4em;
+}
+
+.back-to-catalogue{
+  padding: 0.75em 1em;
 }
 
 
