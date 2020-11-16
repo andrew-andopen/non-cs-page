@@ -141,60 +141,44 @@ const productInfo = [
   {
     name: "Aesop",
     image: "assets/product_images/aesop.png"
-  },
-  {
-    name: "Aesop",
-    image: "assets/product_images/aesop.png"
-  },
-  {
-    name: "Aesop",
-    image: "assets/product_images/aesop.png"
-  },
-  {
-    name: "Open Homes",
-    image: "assets/product_images/open_homes.png"
-  },
-  {
-    name: "Sakura",
-    image: "assets/product_images/sakura.png"
-  },
-  {
-    name: "St Patricks Day",
-    image: "assets/product_images/st_patricks_day.png"
-  },
-  {
-    name: "Winter Olympics",
-    image: "assets/product_images/winter_olympics.png"
   }
 ]
 
-    const productGridTag = document.getElementById('products-grid')
-      for (let i = 0; i <= productInfo.length - 1; i++) {
-        //create product card element
-        const productCard = document.createElement('div')
-        productCard.classList.add('product-card')
-    
-        //create product image
-        const productImage = document.createElement('div')
-        productImage.classList.add('product-image')
-        const img = document.createElement('IMG')
-        productImage.append(img)
-    
-        //Create product title
-        const title = document.createElement('div')
-        title.classList.add('product-name')
-        const h4 = document.createElement('h4')
-        title.append(h4)
-        const productTitle = document.createTextNode(productInfo[i])
-        h4.append(productTitle)
-        productCard.append(productImage, title)
+const createProductCards = (container) => {
+//create product card element
+const productCard = document.createElement('div')
+productCard.classList.add('product-card')
 
-        productGridTag.appendChild(productCard)
-      }
+//create product image
+const productImage = document.createElement('div')
+productImage.classList.add('product-image')
+const img = document.createElement('IMG')
+productImage.append(img)
+
+//Create product title
+const title = document.createElement('div')
+title.classList.add('product-name')
+const h4 = document.createElement('h4')
+title.append(h4)
+const productTitle = document.createTextNode(productInfo[i])
+h4.append(productTitle)
+productCard.append(productImage, title)
+
+//Append entire card to containers
+container.appendChild(productCard)
+}
+
+ const productGridTag = document.getElementById('products-grid')
+
+for (let i = 0; i <= productInfo.length - 1; i++) {
+  //Run create card function on product grid container
+   createProductCards(productGridTag)
+}
 
 
 const productTitles = productGridTag.querySelectorAll('.product-card h4')
 const productImages = productGridTag.querySelectorAll('.product-card img')
+
 
 productTitles.forEach((title, index) => {
   title.innerHTML = productInfo[index].name
@@ -226,28 +210,11 @@ const campaignInfo = [
   }
 ]
 
+
 const campaignGridTag = document.getElementById('campaigns-grid')
 for (let i = 0; i <= campaignInfo.length - 1; i++) {
-  //create product card element
-  const productCard = document.createElement('div')
-  productCard.classList.add('product-card')
-
-  //create product image
-  const productImage = document.createElement('div')
-  productImage.classList.add('product-image')
-  const img = document.createElement('IMG')
-  productImage.append(img)
-
-  //Create product title
-  const title = document.createElement('div')
-  title.classList.add('product-name')
-  const h4 = document.createElement('h4')
-  title.append(h4)
-  const productTitle = document.createTextNode(productInfo[i])
-  h4.append(productTitle)
-  productCard.append(productImage, title)
-
-  campaignGridTag.appendChild(productCard)
+  //Run create card function on campaigns grid container
+  createProductCards(campaignGridTag)
 }
 
 
