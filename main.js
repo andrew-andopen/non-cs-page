@@ -96,7 +96,7 @@ closeTag.forEach(tag => {
 })
                    
 
-//Product page
+//Product catalogue
 const productInfo = [
   {
     name: "Belo Keyring",
@@ -168,15 +168,103 @@ const productInfo = [
   }
 ]
 
+    const productGridTag = document.getElementById('products-grid')
+      for (let i = 0; i <= productInfo.length - 1; i++) {
+        //create product card element
+        const productCard = document.createElement('div')
+        productCard.classList.add('product-card')
+    
+        //create product image
+        const productImage = document.createElement('div')
+        productImage.classList.add('product-image')
+        const img = document.createElement('IMG')
+        productImage.append(img)
+    
+        //Create product title
+        const title = document.createElement('div')
+        title.classList.add('product-name')
+        const h4 = document.createElement('h4')
+        title.append(h4)
+        const productTitle = document.createTextNode(productInfo[i])
+        h4.append(productTitle)
+        productCard.append(productImage, title)
 
-const productCards = document.querySelectorAll('.product-image img')
-const producttags = document.querySelectorAll('.product-name h4')
-producttags.forEach((card, count) => {
-  card.innerHTML = productInfo[count].name
+        productGridTag.appendChild(productCard)
+      }
+
+
+const productTitles = productGridTag.querySelectorAll('.product-card h4')
+const productImages = productGridTag.querySelectorAll('.product-card img')
+
+productTitles.forEach((title, index) => {
+  title.innerHTML = productInfo[index].name
 })
 
-productCards.forEach((card, count) => {
-  card.src =  productInfo[count].image
+productImages.forEach((photo, index) => {
+  photo.src = productInfo[index].image
+})
+
+
+
+//campaign catalogue
+const campaignInfo = [
+  {
+    name: "Open Homes",
+    image: "assets/product_images/open_homes.png"
+  },
+  {
+    name: "Sakura",
+    image: "assets/product_images/sakura.png"
+  },
+  {
+    name: "St Patricks Day",
+    image: "assets/product_images/st_patricks_day.png"
+  },
+  {
+    name: "Winter Olympics",
+    image: "assets/product_images/winter_olympics.png"
+  }
+]
+
+const campaignGridTag = document.getElementById('campaigns-grid')
+for (let i = 0; i <= campaignInfo.length - 1; i++) {
+  //create product card element
+  const productCard = document.createElement('div')
+  productCard.classList.add('product-card')
+
+  //create product image
+  const productImage = document.createElement('div')
+  productImage.classList.add('product-image')
+  const img = document.createElement('IMG')
+  productImage.append(img)
+
+  //Create product title
+  const title = document.createElement('div')
+  title.classList.add('product-name')
+  const h4 = document.createElement('h4')
+  title.append(h4)
+  const productTitle = document.createTextNode(productInfo[i])
+  h4.append(productTitle)
+  productCard.append(productImage, title)
+
+  campaignGridTag.appendChild(productCard)
+}
+
+
+const campaignTitles = campaignGridTag.querySelectorAll('.product-card h4')
+const campaignImages = campaignGridTag.querySelectorAll('.product-card img')
+
+campaignTitles.forEach((title, index) => {
+  title.innerHTML = campaignInfo[index].name
+})
+
+campaignImages.forEach((photo, index) => {
+  photo.src = campaignInfo[index].image
+})
+
+
+const productCards = document.querySelectorAll('.product-card')
+productCards.forEach((card, index) => {
   card.addEventListener('click', ()=> {
     window.location.href='/non-cs-page/product.html'
   });
