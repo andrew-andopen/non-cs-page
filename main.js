@@ -26,6 +26,7 @@ const watchTag = document.querySelectorAll('.watch')
 const closeTag = document.querySelectorAll('.closeTag')
 const contactTag = document.querySelectorAll('.contact')
 const demoTag =  document.querySelectorAll('.watch-demo')
+const iWantTag = document.querySelector('.i-want')
 
 
 //outer
@@ -58,7 +59,7 @@ function openModal() {
 function closeModal() {
   modalTag.classList.remove('open-modal')
   video.src = ''
-      ejectContent(formWrapper, videoWrapper, demoWrapper)
+   ejectContent(formWrapper, videoWrapper, demoWrapper)
 }
 
 watchTag.forEach(tag => {
@@ -86,6 +87,12 @@ contactTag.forEach(tag => {
     injectContent(formWrapper)
     ejectContent(videoWrapper, demoWrapper)
   })
+})
+
+iWantTag.addEventListener('click', () => {
+  openModal()
+  injectContent(formWrapper)
+  ejectContent(videoWrapper, demoWrapper)
 })
 
 closeTag.forEach(tag => {
