@@ -151,6 +151,10 @@ const productInfo = [
   {
     name: "Tote Bag",
     image: "assets/product_images/bag.png"
+  },
+  {
+    name: "Watering Can",
+    image: "assets/product_images/watering_can.jpg"
   }
 ]
 
