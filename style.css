@@ -574,10 +574,12 @@ li{
 
 .top-left{
   grid-column: 1/2;
+  border-radius: 3% 0 0 0;
 }
 
 .top-right{
   grid-column: 2/3;
+  border-radius: 0 3% 0 0;
 }
 
 .top img{
@@ -587,6 +589,7 @@ li{
 .bottom{
   padding:5em;
   background-color:#F6F4F5;
+  border-radius: 0 0 3% 3%;
 }
 
 .product-info{
