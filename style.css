@@ -885,7 +885,6 @@ display: block;
   h3{
     font-size: 1.3em;
   }
-  
   .column-left,
   .column-right{
     grid-column: 1/13;
@@ -903,6 +902,11 @@ display: block;
   .logo{
     max-width: 5em;
   }
+
+.intro {
+  margin-top: 5em;
+}
+
 
   .button{
     padding: 0.75em 0.5em;
