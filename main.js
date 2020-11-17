@@ -179,7 +179,6 @@ for (let i = 0; i <= productInfo.length - 1; i++) {
 const productTitles = productGridTag.querySelectorAll('.product-card h4')
 const productImages = productGridTag.querySelectorAll('.product-card img')
 
-
 productTitles.forEach((title, index) => {
   title.innerHTML = productInfo[index].name
 })

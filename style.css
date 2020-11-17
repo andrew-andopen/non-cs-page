@@ -734,7 +734,8 @@ display: block;
 
 @media screen and (max-width: 1024px) {
 
-.column-wide{ 
+.column-wide,
+.product-grid{ 
     grid-column: 1/13;
   }
   
@@ -786,6 +787,19 @@ display: block;
   #form{
   max-width: 60%;
   }
+
+  .product-sub {
+    margin-right:0;
+  } 
+
+  #cash-gifting-graphic {
+    grid-column: 1/7;
+}
+
+#cash-gifting-text {
+  grid-column: 8/13;
+  margin-top:0;
+}
 }
 
 
@@ -837,6 +851,23 @@ display: block;
   
     #form{
   max-width: 70%;
+  }
+
+  #product-page .padding{
+    padding:6em 3em 8em 3em;
+  }
+
+  #product-page .catalogue.padding{
+    padding: 0em 3em 10em 3em;
+  }
+
+  #product-page .padding.product-intro{
+    padding-bottom:2em;
+  }
+
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
 }
@@ -937,7 +968,28 @@ display: block;
   .unsub-intro p{
     margin-bottom:1em;
   }
-  
+
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #product-page .padding{
+    padding: 6em 1.5em 8em 1.5em;
+  }
+
+  #product-page .catalogue.padding {
+    padding: 0em 1.5em 10em 1.5em;
+}
+
+#cash-gifting-graphic {
+  grid-column: 1/13;
+}
+
+#cash-gifting-text {
+grid-column: 1/13;
+margin-top:2em;
+}
+
 }
 
 
