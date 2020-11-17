@@ -109,6 +109,10 @@ closeTag.forEach(tag => {
 //Product catalogue
 const productInfo = [
   {
+    name: "Aesop",
+    image: "assets/product_images/aesop.png"
+  },
+  {
     name: "Belo Keyring",
     image: "assets/product_images/keyring.png"
   },
@@ -147,10 +151,6 @@ const productInfo = [
   {
     name: "Tote Bag",
     image: "assets/product_images/bag.png"
-  },
-  {
-    name: "Aesop",
-    image: "assets/product_images/aesop.png"
   }
 ]
 
