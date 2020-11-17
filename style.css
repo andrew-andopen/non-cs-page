@@ -210,6 +210,10 @@ section {
   justify-content: center;
 }
 
+.hiw.padding{
+  padding-top:3em;
+}
+
 
 .how-it-works h1 {
   text-align: center;
