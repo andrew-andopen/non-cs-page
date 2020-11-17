@@ -89,11 +89,14 @@ contactTag.forEach(tag => {
   })
 })
 
-iWantTag.addEventListener('click', () => {
-  openModal()
-  injectContent(formWrapper)
-  ejectContent(videoWrapper, demoWrapper)
-})
+if(iWantTag){
+  iWantTag.addEventListener('click', () => {
+    openModal()
+    injectContent(formWrapper)
+    ejectContent(videoWrapper, demoWrapper)
+  })
+}
+
 
 closeTag.forEach(tag => {
   tag.addEventListener('click', function() {
