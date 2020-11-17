@@ -869,6 +869,15 @@ display: block;
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .column-product,
+  .product-info {
+    grid-column: 1/13;
+}
+
+.product-info {
+  margin-top:3em;
+}
   
 }
 
@@ -973,10 +982,6 @@ display: block;
     margin-bottom:1em;
   }
 
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   #product-page .padding{
     padding: 6em 1.5em 8em 1.5em;
   }
@@ -992,6 +997,10 @@ display: block;
 #cash-gifting-text {
 grid-column: 1/13;
 margin-top:2em;
+}
+
+.column-individual-product .bottom{
+  padding:2.5em;
 }
 
 }
