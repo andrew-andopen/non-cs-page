@@ -1,47 +1,26 @@
-const question = document.getElementsByClassName('question-title')
-const answer = document.getElementsByClassName('answer')
+//modals
 
-for (var i = 0; i < question.length; i++) {
-  question[i].onclick = function() {
-    const setClasses = !this.classList.contains('active')
-    setClass(question, 'active', 'remove')
-    setClass(answer, 'show-answer', 'remove')
-
-    if (setClasses) {
-      this.classList.toggle('active')
-      this.nextElementSibling.classList.toggle('show-answer')
-    }
-  }
-}
-
-function setClass(els, className, fnName) {
-  for (var i = 0; i < els.length; i++) {
-    els[i].classList[fnName](className)
-  }
-}
-
-
-//triggers
-const watchTag = document.querySelectorAll('.watch')
-const closeTag = document.querySelectorAll('.closeTag')
+//Triggers
 const contactTag = document.querySelectorAll('.contact')
-const demoTag =  document.querySelectorAll('.watch-demo')
-const iWantTag = document.querySelector('.i-want')
+const videoTag = document.querySelectorAll('.video')
+const demoTag =  document.querySelectorAll('.demo')
+const closeTag = document.querySelectorAll('.close-tag')
 
 
-//outer
+//Outer modal
 const modalTag = document.querySelector('.modal')
 
-//content
+
+//Inner modal content
 const videoWrapper = document.querySelector('.video-wrapper')
 const demoWrapper = document.querySelector('.demo-wrapper')
 const formWrapper = document.querySelector('.form-wrapper')
 const formTag = document.getElementById('form')
 
-
-//video src
+// //video src
 const dora = 'https://player.vimeo.com/video/444942505'
 const demo = 'https://player.vimeo.com/video/455552561'
+
 
 const injectContent = content => {
   content.style.display = 'flex'
@@ -62,7 +41,7 @@ function closeModal() {
    ejectContent(formWrapper, videoWrapper, demoWrapper)
 }
 
-watchTag.forEach(tag => {
+videoTag.forEach(tag => {
   tag.addEventListener('click', function() {
   video.src = dora
     openModal()
@@ -89,22 +68,37 @@ contactTag.forEach(tag => {
   })
 })
 
-if(iWantTag){
-  iWantTag.addEventListener('click', () => {
-    openModal()
-    injectContent(formWrapper)
-    ejectContent(videoWrapper, demoWrapper)
-  })
-}
-
-
 closeTag.forEach(tag => {
   tag.addEventListener('click', function() {
     closeModal()
-    ejectContent(demoWrapper)
+    ejectContent(demoWrapper, videoWrapper, formWrapper)
     })
 })
-                   
+
+
+//FAQ
+const FaqQuestion = document.getElementsByClassName('question-title')
+const FaqAnswer = document.getElementsByClassName('question-answer')
+
+for (let i = 0; i < FaqQuestion.length; i++) {
+  FaqQuestion[i].onclick = function() {
+    const setClasses = !this.classList.contains('active')
+    setClass(FaqQuestion, 'active', 'remove')
+    setClass(FaqAnswer, 'show-answer', 'remove')
+
+    if (setClasses) {
+      this.classList.toggle('active')
+      this.nextElementSibling.classList.toggle('show-answer')
+    }
+  }
+}
+
+function setClass(els, className, fnName) {
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList[fnName](className)
+  }
+}
+                  
 
 //Product catalogue
 const productInfo = [
@@ -158,20 +152,21 @@ const productInfo = [
   }
 ]
 
+let i
 const createProductCards = (container) => {
 //create product card element
 const productCard = document.createElement('div')
-productCard.classList.add('product-card')
+productCard.classList.add('product-card', 'mb-2')
 
 //create product image
 const productImage = document.createElement('div')
-productImage.classList.add('product-image')
+productImage.classList.add('product-image', 'mb-1')
 const img = document.createElement('IMG')
 productImage.append(img)
 
 //Create product title
 const title = document.createElement('div')
-title.classList.add('product-name')
+title.classList.add('product-title', 'mb-2', 'center-text')
 const h4 = document.createElement('h4')
 title.append(h4)
 const productTitle = document.createTextNode(productInfo[i])
@@ -182,13 +177,12 @@ productCard.append(productImage, title)
 container.appendChild(productCard)
 }
 
- const productGridTag = document.getElementById('products-grid')
+ const productGridTag = document.querySelector('.catalogue-grid')
 
 for (let i = 0; i <= productInfo.length - 1; i++) {
   //Run create card function on product grid container
    createProductCards(productGridTag)
 }
-
 
 const productTitles = productGridTag.querySelectorAll('.product-card h4')
 const productImages = productGridTag.querySelectorAll('.product-card img')
@@ -200,6 +194,7 @@ productTitles.forEach((title, index) => {
 productImages.forEach((photo, index) => {
   photo.src = productInfo[index].image
 })
+
 
 
 
@@ -224,12 +219,11 @@ const campaignInfo = [
 ]
 
 
-const campaignGridTag = document.getElementById('campaigns-grid')
+const campaignGridTag = document.querySelector('.campaigns-grid')
 for (let i = 0; i <= campaignInfo.length - 1; i++) {
   //Run create card function on campaigns grid container
   createProductCards(campaignGridTag)
 }
-
 
 const campaignTitles = campaignGridTag.querySelectorAll('.product-card h4')
 const campaignImages = campaignGridTag.querySelectorAll('.product-card img')
@@ -243,12 +237,112 @@ campaignImages.forEach((photo, index) => {
 })
 
 
+
 const productCards = document.querySelectorAll('.product-card')
 productCards.forEach((card, index) => {
   card.addEventListener('click', ()=> {
-    window.location.href='/non-cs-page/product.html'
+    window.location.href='product.html'
   });
   card.addEventListener('mouseover', ()=> {
     card.style.cursor = 'pointer'
   })
 })
+
+
+
+ 
+
+// if(iWantTag){
+//   iWantTag.addEventListener('click', () => {
+//     openModal()
+//     injectContent(formWrapper)
+//     ejectContent(videoWrapper, demoWrapper)
+//   })
+// }
+
+
+
+
+// //triggers
+// const watchTag = document.querySelectorAll('.watch')
+// const closeTag = document.querySelectorAll('.closeTag')
+// const contactTag = document.querySelectorAll('.contact')
+// const demoTag =  document.querySelectorAll('.watch-demo')
+// const iWantTag = document.querySelector('.i-want')
+
+// //outer
+// const modalTag = document.querySelector('.modal')
+
+// //content
+// const videoWrapper = document.querySelector('.video-wrapper')
+// const demoWrapper = document.querySelector('.demo-wrapper')
+// const formWrapper = document.querySelector('.form-wrapper')
+// const formTag = document.getElementById('form')
+
+
+// //video src
+// const dora = 'https://player.vimeo.com/video/444942505'
+// const demo = 'https://player.vimeo.com/video/455552561'
+
+// const injectContent = content => {
+//   content.style.display = 'flex'
+// }
+
+// const ejectContent = content => {
+//   content.style.display = 'none';
+// }
+
+// function openModal() {
+//   modalTag.classList.add('open-modal')
+//   event.preventDefault()
+// }
+
+// function closeModal() {
+//   modalTag.classList.remove('open-modal')
+//   video.src = ''
+//    ejectContent(formWrapper, videoWrapper, demoWrapper)
+// }
+
+// watchTag.forEach(tag => {
+//   tag.addEventListener('click', function() {
+//   video.src = dora
+//     openModal()
+//     injectContent(videoWrapper)
+//     ejectContent(formWrapper, demoWrapper)
+//   })
+// })
+
+// demoTag.forEach(tag => {
+//   tag.addEventListener('click', function() {
+//   video.src = demo
+//     openModal()
+//     injectContent(demoWrapper)
+//     ejectContent(videoWrapper, formWrapper)
+//   })
+// })
+
+
+// contactTag.forEach(tag => {
+//   tag.addEventListener('click', () => {
+//     openModal()
+//     injectContent(formWrapper)
+//     ejectContent(videoWrapper, demoWrapper)
+//   })
+// })
+
+// if(iWantTag){
+//   iWantTag.addEventListener('click', () => {
+//     openModal()
+//     injectContent(formWrapper)
+//     ejectContent(videoWrapper, demoWrapper)
+//   })
+// }
+
+
+// closeTag.forEach(tag => {
+//   tag.addEventListener('click', function() {
+//     closeModal()
+//     ejectContent(demoWrapper)
+//     })
+// })
+ 
