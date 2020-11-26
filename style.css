@@ -140,23 +140,23 @@ footer a {
 }
 
 .br{
-  border-radius: 1em;
+  border-radius: 1rem;
 }
 
 .br-tl{
-  border-top-left-radius: 1em;
+  border-top-left-radius: 1rem;
 }
 
 .br-tr{
-  border-top-right-radius:1em;
+  border-top-right-radius:1rem;
 }
 
 .br-br{
-  border-bottom-right-radius: 1em;
+  border-bottom-right-radius: 1rem;
 }
 
 .br-bl{
-  border-bottom-left-radius: 1em;
+  border-bottom-left-radius: 1rem;
 }
 
 .logo {
@@ -364,11 +364,11 @@ footer {
 }
 
 footer li {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 footer img {
-  max-width: 1em;
+  max-width: 1rem;
   margin-right: 12px;
 }
 
@@ -411,7 +411,7 @@ footer img {
 }
 
 .close img {
-  max-width: 1em;
+  max-width: 1rem;
 }
 
 .open-modal {
@@ -438,7 +438,7 @@ footer img {
   border-radius: 8px;
   background-color: white;
   width: 35%;
-  padding: 2em 2em 3em 2em;
+  padding: 2rem 2rem 3rem 2rem;
   position: fixed;
   z-index: 20;
 }
@@ -537,9 +537,29 @@ footer img {
     font-size: 1rem;
   }
 
+  .br{
+    border-radius: 0.5rem;
+  }
+  
+  .br-tl{
+    border-top-left-radius: 0.5rem;
+  }
+  
+  .br-tr{
+    border-top-right-radius:0.5rem;
+  }
+  
+  .br-br{
+    border-bottom-right-radius: 0.5rem;
+  }
+  
+  .br-bl{
+    border-bottom-left-radius: 0.5rem;
+  }
+
   header,
   footer {
-    padding: 2em 2em;
+    padding: 2rem 2rem;
   }
 
   .logo {
@@ -556,7 +576,7 @@ footer img {
   }
 
   .graphic-container{
-    padding: 2em 2em;
+    padding: 2rem 2rem;
   }
 
   footer nav ul {
@@ -572,7 +592,7 @@ footer img {
   }
 
   .modal{
-    padding:1em;
+    padding:1rem;
   }
 
   #form{
