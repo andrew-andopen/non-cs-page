@@ -521,6 +521,11 @@ footer img {
 
   .product-card {
   width: calc(50% - 0.5rem);
+  border-radius:0.5rem;
+  }
+
+  .product-card img{
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .campaigns h2{
