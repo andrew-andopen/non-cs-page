@@ -538,23 +538,23 @@ footer img {
   }
 
   .br{
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
   }
   
   .br-tl{
-    border-top-left-radius: 0.5rem;
+    border-top-left-radius: 0.25rem;
   }
   
   .br-tr{
-    border-top-right-radius:0.5rem;
+    border-top-right-radius:0.25rem;
   }
   
   .br-br{
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.25rem;
   }
   
   .br-bl{
-    border-bottom-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.25rem;
   }
 
   header,
