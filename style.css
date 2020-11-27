@@ -443,6 +443,13 @@ footer img {
   z-index: 20;
 }
 
+
+@media screen and (max-width: 1440px) {
+  .p-top-xlarge {
+    padding-top: 10rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .start-three-span-eleven,
   .start-four-span-ten {
